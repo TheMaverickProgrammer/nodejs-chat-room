@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+ <head>
+  <title>BadBit</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+  <script src="/eureca.js"></script>
+  <!--<link rel="stylesheet" type="text/css" href="/style.css">-->
+  <style>
+
+  body{
+    background-color: #030303;
+  }
+
+  #auth {
+  }
+
+  #chat {
+    margin-left: 25%;
+    margin-right: 25%;
+    height:355px;
+    width:50%;
+    background-color: #033440;
+    border:3px solid #4B4B4B;
+    border-radius: 1%;
+    color: #C7E04E;
+  }
+
+  #msgbox {
+    height:300px;
+    max-height:300px;
+    overflow:scroll;
+    list-style:none;
+    padding: 0px;
+  }
+
+  #msgbox li {
+    text-align: left;
+    padding: 0px;
+    list-style:none;
+    color:#C7E04E;
+    font:700 12px arial;
+  }
+
+  #msgbox li b {
+    text-align: left;
+    padding: 0px;
+    font:700 14px arial;
+    color:#849A19;
+  }
+
+  input {
+    width: 40%;
+    background-color: #FFBB77;
+    border: 3px solid #A05D1A;
+    color: #440144;
+  }
+
+  button {
+    width: 20%;
+    margin-left: 38%;
+    background-color: #FFBB77;
+    border: 3px solid #A05D1A;
+    color: #440144;
+  }
+  </style>
+ </head>
+ <body>
+  <center><h1 style="color:white;font-family: 'Courier New', Courier, monospace";>BadBit Chat v1.0</h1></center>
+  <div id="chat">
+    <div id="auth">
+      <input type="text" id="nick" /><button id="logBtn">Log In</button>
+    </div>
+
+    <div id="main" style="display:none">
+     <ul id="msgbox"></ul>
+     <input type="text" id="msg" /><button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script>
+   var client = new Eureca.Client();
+   var server;
+
+   client.ready(function(proxy) {
+     server = proxy;
+   });
+
+   var tchat = client.exports.tchat = {};
+
+   tchat.send = function(nick, message) {
+     var tchatline = $('<li><b>'+nick+' </b><span>'+message+'</span></li>');
+     $('#msgbox').append(tchatline);
+   }
+
+   tchat.disconnect = function(nick) {
+     var tchatline = $('<li style="float: right;"><b>'+nick+' </b> has disconnected.</li>');
+     $('#msgbox').append(tchatline);
+   }
+
+   tchat.welcome = function(nick) {
+     $('#auth').fadeOut('fast', function() {
+       $('#main').fadeIn('fast');
+     });
+
+     var tchatline = $('<li style="float: right;"><b>'+nick+' </b> just joined the chat.</li>');
+     $('#msgbox').append(tchatline);
+   }
+
+   $('#nick').val('anonymous-'+new Date().getTime());
+
+   $('#logBtn').click(function() {
+     if(!server) return; // client not ready
+
+     var nick = $('#nick').val();
+     server.tchatServer.login(nick);
+   });
+
+   $('#sendBtn').click(function() {
+     if(!server) return; // client not ready
+
+    server.tchatServer.send($('#msg').val());
+  });
+  </script>
+ </body>
+</html>

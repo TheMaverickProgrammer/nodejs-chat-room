@@ -1,0 +1,151 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '--save', 'engine.io' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'engine.io', null ]
+5 verbose cache add name=undefined spec="engine.io" args=["engine.io",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'engine.io',
+6 verbose parsed url   path: 'engine.io',
+6 verbose parsed url   href: 'engine.io' }
+7 silly lockFile 5e427b5a-engine-io engine.io
+8 verbose lock engine.io /Users/mavericky/.npm/5e427b5a-engine-io.lock
+9 silly lockFile 5e427b5a-engine-io engine.io
+10 silly lockFile 5e427b5a-engine-io engine.io
+11 verbose addNamed [ 'engine.io', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 0a0dee48-engine-io engine.io@
+14 verbose lock engine.io@ /Users/mavericky/.npm/0a0dee48-engine-io.lock
+15 silly addNameRange { name: 'engine.io', range: '*', hasData: false }
+16 verbose request where is /engine.io
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id a1d01fda2cc5406f
+19 verbose url raw /engine.io
+20 verbose url resolving [ 'https://registry.npmjs.org/', './engine.io' ]
+21 verbose url resolved https://registry.npmjs.org/engine.io
+22 verbose request where is https://registry.npmjs.org/engine.io
+23 info trying registry request attempt 1 at 17:19:17
+24 verbose etag "DHPHH93UNRHCGA5I1U7V34MKL"
+25 http GET https://registry.npmjs.org/engine.io
+26 http 200 https://registry.npmjs.org/engine.io
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Sat, 17 Jan 2015 23:19:17 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+27 silly registry.get     etag: '"22BZJYDML4LFPTF3TS0YDTD0B"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '94383',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '16',
+27 silly registry.get     'x-served-by': 'cache-atl6225-ATL',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1421536757.535535,VS0,VE1',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'engine.io', range: '*', hasData: true }
+29 silly addNameRange versions [ 'engine.io',
+29 silly addNameRange   [ '0.1.0',
+29 silly addNameRange     '0.1.1',
+29 silly addNameRange     '0.1.2',
+29 silly addNameRange     '0.2.0',
+29 silly addNameRange     '0.2.1',
+29 silly addNameRange     '0.2.2',
+29 silly addNameRange     '0.3.0',
+29 silly addNameRange     '0.3.1',
+29 silly addNameRange     '0.3.2',
+29 silly addNameRange     '0.3.3',
+29 silly addNameRange     '0.3.4',
+29 silly addNameRange     '0.3.5',
+29 silly addNameRange     '0.3.7',
+29 silly addNameRange     '0.3.8',
+29 silly addNameRange     '0.3.9',
+29 silly addNameRange     '0.3.10',
+29 silly addNameRange     '0.4.1',
+29 silly addNameRange     '0.4.2',
+29 silly addNameRange     '0.4.3',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.6.0',
+29 silly addNameRange     '0.6.1',
+29 silly addNameRange     '0.6.2',
+29 silly addNameRange     '0.6.3',
+29 silly addNameRange     '0.7.0',
+29 silly addNameRange     '0.7.1',
+29 silly addNameRange     '0.7.2',
+29 silly addNameRange     '0.7.3',
+29 silly addNameRange     '0.7.4',
+29 silly addNameRange     '0.7.5',
+29 silly addNameRange     '0.7.6',
+29 silly addNameRange     '0.7.7',
+29 silly addNameRange     '0.7.8',
+29 silly addNameRange     '0.7.9',
+29 silly addNameRange     '0.7.10',
+29 silly addNameRange     '0.7.11',
+29 silly addNameRange     '0.7.12',
+29 silly addNameRange     '0.7.13',
+29 silly addNameRange     '0.7.14',
+29 silly addNameRange     '0.8.0',
+29 silly addNameRange     '0.8.1',
+29 silly addNameRange     '0.8.2',
+29 silly addNameRange     '0.9.0',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '1.0.3',
+29 silly addNameRange     '1.0.4',
+29 silly addNameRange     '1.0.5',
+29 silly addNameRange     '1.1.0',
+29 silly addNameRange     '1.1.1',
+29 silly addNameRange     '1.2.0',
+29 silly addNameRange     '1.2.1',
+29 silly addNameRange     '1.2.2',
+29 silly addNameRange     '1.3.0',
+29 silly addNameRange     '1.3.1',
+29 silly addNameRange     '1.4.0',
+29 silly addNameRange     '1.4.1',
+29 silly addNameRange     '1.4.2',
+29 silly addNameRange     '1.4.3' ] ]
+30 verbose addNamed [ 'engine.io', '1.4.3' ]
+31 verbose addNamed [ '1.4.3', '1.4.3' ]
+32 silly lockFile 29eb9b52-engine-io-1-4-3 engine.io@1.4.3
+33 verbose lock engine.io@1.4.3 /Users/mavericky/.npm/29eb9b52-engine-io-1-4-3.lock
+34 silly lockFile 278e3441-rg-engine-io-engine-io-1-4-3-tgz https://registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz
+35 verbose lock https://registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz /Users/mavericky/.npm/278e3441-rg-engine-io-engine-io-1-4-3-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz',
+36 verbose addRemoteTarball   '0ac97dad713e8ca821c1f18ab037bf088555c3a6' ]
+37 info retry fetch attempt 1 at 17:19:18
+38 verbose fetch to= /var/folders/wx/pxvcsnrn471d4hb9v9h31xvw0000gn/T/npm-3476-HTOtmZcM/registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz
+39 http GET https://registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz
+40 http 200 https://registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz
+41 silly lockFile 278e3441-rg-engine-io-engine-io-1-4-3-tgz https://registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz
+42 silly lockFile 278e3441-rg-engine-io-engine-io-1-4-3-tgz https://registry.npmjs.org/engine.io/-/engine.io-1.4.3.tgz
+43 silly lockFile 29eb9b52-engine-io-1-4-3 engine.io@1.4.3
+44 silly lockFile 29eb9b52-engine-io-1-4-3 engine.io@1.4.3
+45 silly lockFile 0a0dee48-engine-io engine.io@
+46 silly lockFile 0a0dee48-engine-io engine.io@
+47 error Error: EACCES, mkdir '/Users/mavericky/.npm/engine.io/1.4.3'
+47 error  { [Error: EACCES, mkdir '/Users/mavericky/.npm/engine.io/1.4.3']
+47 error   errno: 3,
+47 error   code: 'EACCES',
+47 error   path: '/Users/mavericky/.npm/engine.io/1.4.3' }
+48 error Please try running this command again as root/Administrator.
+49 error System Darwin 14.0.0
+50 error command "node" "/usr/local/bin/npm" "install" "--save" "engine.io"
+51 error cwd /Users/mavericky/Code/bad-bits
+52 error node -v v0.10.32
+53 error npm -v 1.4.28
+54 error path /Users/mavericky/.npm/engine.io/1.4.3
+55 error code EACCES
+56 error errno 3
+57 error stack Error: EACCES, mkdir '/Users/mavericky/.npm/engine.io/1.4.3'
+58 verbose exit [ 3, true ]

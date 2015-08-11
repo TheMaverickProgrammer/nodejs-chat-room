@@ -1,0 +1,29 @@
+html {}
+body {}
+
+#chat {
+ padding: 50%;
+ background-color: #125463;
+}
+
+#msgbox {
+border:3px solid #555;
+height:300px;
+width:500px;
+max-height: 500px;
+overflow:scroll;
+list-style:none;
+padding:5px;
+}
+
+#msgbox li {
+list-style:none;
+padding:0px;
+color:#C7E04E;
+font:700 12px arial;
+}
+
+#msgbox li b {
+font:700 14px arial;
+color:#849A19;
+}
